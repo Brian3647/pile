@@ -7,18 +7,29 @@ pub fn get_info(path: PathBuf) -> String {
         None => "none",
     };
 
-    match &*file_ext {
+    match file_ext {
         // Programming language
-        "rs" => "Rust source code file.".into(),
-        "go" => "Go source code file.".into(),
-        "sh" => "Bash shell script file.".into(),
+        "rs" => "Rust source code file.",
+        "js" => "JavaScript source code file.",
+        "ts" => "TypeScript source code file.",
+        "go" => "Go source code file.",
+        "sh" => "Bash shell script file.",
+        "hs" => "Haskell source code file.",
 
         // Media file
-        "png" => "Portable Network Graphics image file.".into(),
-        "jpeg" => "Lossy compressed digital image file.".into(),
+        "png" => "Portable Network Graphics image file.",
+        "jpeg" => "Lossy compressed digital image file.",
 
-        "none" => "Bash shell script file.".into(),
+        // Other
+        "toml" => "TOML file.",
+        "yml" | "yaml" => "YAML file.",
+        "json" | "jsonc" => "JSON file.",
+        "lock" => "Locked file.",
+        "md" => "MarkDown file.",
 
-        _ => "Unknown file.".into(),
+        "none" => "Executable file.",
+
+        _ => "Unknown file.",
     }
+    .into()
 }
