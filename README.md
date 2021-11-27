@@ -5,6 +5,6 @@ A cool replacement for 'file' linux command.
 
 #### Todo
 
-- [ ] Handle more file extension, currently only handle ~5 types (.rs,.go,.sh,.png,.jpeg)
+- [ ] Handle more file extensions
 - [ ] Customizable colors, prefix icon, information and etc.
 - [ ] Better structure
